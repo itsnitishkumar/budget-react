@@ -3,26 +3,17 @@ import './App.css';
 import MainHeader from './components/MainHeader';
 import NewEntryForm from './components/NewEntryForm';
 import DisplayBalance from './components/DisplayBalance';
+import DisplayBalances from './components/DisplayBalances';
 
 function App() {
   return (
     <Container>
-      <MainHeader title='Budget' type='h1'/>
       
+      <MainHeader title='Budget' type='h1'/>
+     
       <DisplayBalance size='small' label='Your Balance:' value='2,500.53'/>
       
-      <Segment textAlign='center'>
-        <Grid columns={2} divided>
-          <Grid.Row>
-            <Grid.Column>
-              <DisplayBalance size='tiny' label='Income:' value='1,045.50'  color='green' align='left'/>
-            </Grid.Column>
-            <Grid.Column>
-              <DisplayBalance size='tiny' label='Expenses:' value='845.50'  color='red' align='left'/>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Segment>
+      <DisplayBalances/>
 
       <MainHeader title='History' type='h3'/>
 
